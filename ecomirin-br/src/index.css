@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* design tokens */
+:root {
+  --green-1: #0f7a3a;
+  --green-2: #23b36b;
+  --green-3: #7BD08B;
+  --text-900: #0f1724;
+  --muted: #6b7280;
+  --text-on-green: #1e3a2e; /* darker green for better contrast on light green background */
+}
+
+/* Put custom @apply rules inside layer to avoid PostCSS errors */
+@layer components {
+  .btn-cta {
+    @apply inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[var(--green-1)] to-[var(--green-2)] text-white py-3 px-6 rounded-full shadow-md transform-gpu hover:-translate-y-0.5 transition;
+  }
+
+  .hero-title {
+    @apply font-extrabold text-black;
+    font-size: clamp(2.75rem, 6.8vw, 6rem); /* large brand title */
+    line-height: 0.98;
+    max-width: 48ch;
+  }
+
+  /* Nav link ativo */
+  .nav-link {
+    @apply relative text-gray-700 hover:text-green-1 transition-colors duration-200;
+  }
+
+  /* Card padrão */
+  .card {
+    @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-100;
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    @apply flex flex-col space-y-1 cursor-pointer;
+  }
+
+  .hamburger span {
+    @apply w-6 h-0.5 bg-gray-700 transition-all duration-300;
+  }
+
+  /* Avatar com iniciais */
+  .avatar {
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl;
+  }
+
+  /* reveal helper */
+  .reveal {
+    transform: translateY(18px);
+    opacity: 0;
+    transition: transform 500ms cubic-bezier(.2,.9,.2,1), opacity 400ms ease-out;
+  }
+  .reveal.revealed {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Scroll reveal helper classes */
+@layer utilities {
+  /* subtle fade at end of truncated paragraph (optional) */
+  .fade-end {
+    position: relative;
+  }
+  .fade-end::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6rem;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'gotham-book', 'Gotham', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+/* Headings use Rubik Medium */
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.text-3xl, .text-4xl, .text-5xl,
+.font-bold, .font-semibold, .font-extrabold {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-weight: 500;
+}
+
+/* Gradiente personalizado */
+.gradient-green {
+  background: linear-gradient(135deg, var(--green-1) 0%, var(--green-2) 100%);
+}
+
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(135deg, var(--green-1), var(--green-2));
+  transform: scaleX(0);
+  animation: underline 0.3s ease-out forwards;
+}
+
+@keyframes underline {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: transform 500ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 400ms ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero SVG hover */
+.hero-svg {
+  transition: transform 0.3s ease-out;
+}
+
+.hero-svg:hover {
+  transform: scale(1.05);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .hero-svg:hover {
+    transform: none;
+  }
+}
