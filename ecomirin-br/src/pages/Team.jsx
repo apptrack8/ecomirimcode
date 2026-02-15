@@ -3,16 +3,20 @@ import { useLanguage } from '../context/LanguageContext'
 import useScrollReveal from '../components/useScrollReveal'
 import TeamCard from '../components/TeamCard'
 import PageHero from '../components/PageHero'
+import pedroAmaroImg from '../assets/team/pedro-amaro.jpeg'
+import arthurPiatetzkyImg from '../assets/team/arthur-piatetzky.jpeg'
+import eduardoVilelaImg from '../assets/team/eduardo-vilela.jpeg'
+import gabrielBendenounImg from '../assets/team/gabriel-bendenoun.jpeg'
 
 const Team = () => {
   const { t } = useLanguage()
   const [containerRef, isContainerRevealed] = useScrollReveal({ threshold: 0.1 })
 
   const teamMembers = [
-    { name: "Pedro Amaro", positionKey: "team.founder", email: "pedro.amaro@ecomirim.eco.br" },
-    { name: "Eduardo Vilela", positionKey: "team.cofounderCreative", email: "eduardo.vilela@ecomirim.eco.br" },
-    { name: "Arthur Piatetzky", positionKey: "team.cofounderTreasurer", email: "arthur.piatetzky@ecomirim.eco.br" },
-    { name: "Gabriel Bendenoun", positionKey: "team.cofounderComms", email: "gabriel.bendenoun@ecomirim.eco.br" }
+    { name: "Pedro Amaro", positionKey: "team.founder", bioKey: "team.bioPedro", email: "pedro.amaro@ecomirim.eco.br", image: pedroAmaroImg },
+    { name: "Eduardo Vilela", positionKey: "team.cofounderCreative", bioKey: "team.bioEduardo", email: "eduardo.vilela@ecomirim.eco.br", image: eduardoVilelaImg },
+    { name: "Arthur Piatetzky", positionKey: "team.cofounderTreasurer", bioKey: "team.bioArthur", email: "arthur.piatetzky@ecomirim.eco.br", image: arthurPiatetzkyImg },
+    { name: "Gabriel Bendenoun", positionKey: "team.cofounderComms", bioKey: "team.bioGabriel", email: "gabriel.bendenoun@ecomirim.eco.br", image: gabrielBendenounImg, imagePosition: '50% 18%' }
   ]
 
   return (
@@ -34,16 +38,13 @@ const Team = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 {t('team.mainTeam')}
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                {t('team.mainTeamDesc')}
-              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
                 <TeamCard
                   key={index}
-                  member={{ ...member, position: t(member.positionKey) }}
+                  member={{ ...member, position: t(member.positionKey), bio: member.bioKey ? t(member.bioKey) : null }}
                   index={index}
                 />
               ))}

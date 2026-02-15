@@ -37,11 +37,22 @@ const TeamCard = ({ member, index }) => {
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div className="card hover:shadow-xl transition-all duration-300 text-center group">
-        {/* Avatar */}
+        {/* Headshot */}
         <div className="mb-6 flex justify-center">
-          <div className={`avatar ${avatarColor} w-24 h-24 text-2xl`}>
-            {getInitials(member.name)}
-          </div>
+          {member.image ? (
+            <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 mx-auto">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover"
+                style={{ objectPosition: member.imagePosition || 'top center' }}
+              />
+            </div>
+          ) : (
+            <div className={`avatar ${avatarColor} w-24 h-24 text-2xl`}>
+              {getInitials(member.name)}
+            </div>
+          )}
         </div>
         
         {/* Nome e cargo */}
@@ -52,6 +63,23 @@ const TeamCard = ({ member, index }) => {
         <p className="text-green-1 font-medium mb-4">
           {member.position}
         </p>
+
+        {member.bio && (
+          <div className="mb-4 text-left">
+            <div className="flex justify-center">
+              <svg className="w-4 h-4 text-gray-400 group-hover:text-green-1 transition-all duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-200">
+              <div className="min-h-0 overflow-hidden">
+                <p className="text-gray-600 text-sm leading-relaxed pt-2">
+                  {member.bio}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
         
         {/* Email */}
         {member.email && (
