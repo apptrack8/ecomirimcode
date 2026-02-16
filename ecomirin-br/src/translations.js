@@ -3,7 +3,7 @@ export const translations = {
 
 
 
-    "team.bioGabriel": "Gabriel Bendenoun é co-fundador e organizador da comunicação e parcerias da EcoMirim. Animado com a oportunidade de espalhar conhecimento da comunidade em que nós vivemos, aproveitou a oportunidade de promover aprendizado da maneira mais criativa, desenvolvendo novas formas de comunicação de ideias com escolas.",    "team.bioArthur": "Arthur Piatetzky é responsável pela tesouraria e pelas operações, atuando na articulação entre o planejamento criativo e a execução das atividades educativas. Seu papel consiste em viabilizar as propostas pedagógicas, superando os desafios logísticos inerentes à sua implementação no ambiente escolar. Além disso, administra as finanças da organização, garantindo o controle dos custos operacionais e a sustentabilidade das ações realizadas.",    "team.bioEduardo": "Eduardo Vilela é responsável por planejar as visitas da EcoMirim nos centros de educação, equilibrando eficácia e interatividade em sua metodologia de conscientização. Fazendo propostas que buscam conciliar ambos esses aspectos, Eduardo garante que as visitas da EcoMirim não são apenas educativas, mas também são engajadoras o suficiente para gerar o aprendizado verdadeiro.",    "team.bioPedro": "Pedro Amaro é fundador da EcoMirim e estudante da Graded School. A iniciativa surgiu a partir de sua paixão pelo ensino e inquietação com a poluição urbana em São Paulo, acreditando no poder da educação como tanto uma oportunidade quanto uma ferramenta de transformação social.",  pt: {
+      pt: {
     nav: {
       home: 'Início',
       mission: 'Nossa Missão',
@@ -278,11 +278,12 @@ export const translations = {
       cofounderCreative: 'Co-founder & Creative Planning',
       cofounderTreasurer: 'Co-founder & Treasurer & Logistics',
       cofounderComms: 'Co-founder & Communications and Partnerships Coordinator',
-    
-    bioPedro: "Pedro Amaro é fundador da EcoMirim e estudante da Graded School. A iniciativa surgiu a partir de sua paixão pelo ensino e inquietação com a poluição urbana em São Paulo, acreditando no poder da educação como tanto uma oportunidade quanto uma ferramenta de transformação social.",
-    bioEduardo: "Eduardo Vilela é responsável por planejar as visitas da EcoMirim nos centros de educação, equilibrando eficácia e interatividade em sua metodologia de conscientização. Fazendo propostas que buscam conciliar ambos esses aspectos, Eduardo garante que as visitas da EcoMirim não são apenas educativas, mas também são engajadoras o suficiente para gerar o aprendizado verdadeiro.",
-    bioArthur: "Arthur Piatetzky é responsável pela tesouraria e pelas operações, atuando na articulação entre o planejamento criativo e a execução das atividades educativas. Seu papel consiste em viabilizar as propostas pedagógicas, superando os desafios logísticos inerentes à sua implementação no ambiente escolar. Além disso, administra as finanças da organização, garantindo o controle dos custos operacionais e a sustentabilidade das ações realizadas.",
-    bioGabriel: "Gabriel Bendenoun é co-fundador e organizador da comunicação e parcerias da EcoMirim. Animado com a oportunidade de espalhar conhecimento da comunidade em que nós vivemos, aproveitou a oportunidade de promover aprendizado da maneira mais criativa, desenvolvendo novas formas de comunicação de ideias com escolas.",
+bioEduardo: "Eduardo Vilela é responsável por planejar as visitas da EcoMirim nos centros de educação, equilibrando eficácia e interatividade em sua metodologia de conscientização. Fazendo propostas que buscam conciliar ambos esses aspectos, Eduardo garante que as visitas da EcoMirim não são apenas educativas, mas também são engajadoras o suficiente para gerar o aprendizado verdadeiro.",
+bioGabriel: "Gabriel Bendenoun é co-fundador e organizador da comunicação e parcerias da EcoMirim. Animado com a oportunidade de espalhar conhecimento da comunidade em que nós vivemos, aproveitou a oportunidade de promover aprendizado da maneira mais criativa, desenvolvendo novas formas de comunicação de ideias com escolas.",
+      bioPedro: "Founder of EcoMirim and a student at Graded School. The initiative grew from his passion for teaching and his concern about urban pollution in São Paulo, grounded in the belief that education is both an opportunity and a tool for social transformation.",
+      bioEduardo: "Responsible for planning EcoMirim’s visits to educational centers, balancing effectiveness and interactivity in its awareness-raising methodology. By proposing approaches that reconcile both, Eduardo ensures visits are not only educational but also engaging enough to foster genuine learning.",
+      bioArthur: "Responsible for treasury and operations, connecting creative planning with the execution of educational activities. He enables pedagogical proposals by overcoming the logistical challenges inherent to implementation in schools, while also managing the organization’s finances to ensure cost control and long-term sustainability.",
+      bioGabriel: "Co-founder responsible for communications and partnerships at EcoMirim. Motivated to share knowledge about the community we live in, he develops creative ways to communicate ideas with schools and promote learning in the most engaging way possible.",
 },
     getInvolved: {
       title: 'Get Involved',
