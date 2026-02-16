@@ -1,5 +1,9 @@
 export const translations = {
-  pt: {
+
+
+
+
+    "team.bioGabriel": "Gabriel Bendenoun é co-fundador e organizador da comunicação e parcerias da EcoMirim. Animado com a oportunidade de espalhar conhecimento da comunidade em que nós vivemos, aproveitou a oportunidade de promover aprendizado da maneira mais criativa, desenvolvendo novas formas de comunicação de ideias com escolas.",    "team.bioArthur": "Arthur Piatetzky é responsável pela tesouraria e pelas operações, atuando na articulação entre o planejamento criativo e a execução das atividades educativas. Seu papel consiste em viabilizar as propostas pedagógicas, superando os desafios logísticos inerentes à sua implementação no ambiente escolar. Além disso, administra as finanças da organização, garantindo o controle dos custos operacionais e a sustentabilidade das ações realizadas.",    "team.bioEduardo": "Eduardo Vilela é responsável por planejar as visitas da EcoMirim nos centros de educação, equilibrando eficácia e interatividade em sua metodologia de conscientização. Fazendo propostas que buscam conciliar ambos esses aspectos, Eduardo garante que as visitas da EcoMirim não são apenas educativas, mas também são engajadoras o suficiente para gerar o aprendizado verdadeiro.",    "team.bioPedro": "Pedro Amaro é fundador da EcoMirim e estudante da Graded School. A iniciativa surgiu a partir de sua paixão pelo ensino e inquietação com a poluição urbana em São Paulo, acreditando no poder da educação como tanto uma oportunidade quanto uma ferramenta de transformação social.",  pt: {
     nav: {
       home: 'Início',
       mission: 'Nossa Missão',
@@ -105,7 +109,12 @@ export const translations = {
       cofounderCreative: 'Co-fundador & Planejamento Criativo',
       cofounderTreasurer: 'Co-fundador & Tesoureiro e Operações',
       cofounderComms: 'Co-fundador & Coordenador de Comunicação e Parcerias',
-    },
+    
+    bioPedro: "COLE O BIO DO PEDRO AQUI",
+    bioEduardo: "COLE O BIO DO EDUARDO AQUI",
+    bioArthur: "COLE O BIO DO ARTHUR AQUI",
+    bioGabriel: "COLE O BIO DO GABRIEL AQUI",
+},
     getInvolved: {
       title: 'Se Envolva',
       subtitle: 'Existem várias formas de participar da nossa missão de educar crianças para um futuro mais sustentável.',
@@ -269,7 +278,12 @@ export const translations = {
       cofounderCreative: 'Co-founder & Creative Planning',
       cofounderTreasurer: 'Co-founder & Treasurer & Logistics',
       cofounderComms: 'Co-founder & Communications and Partnerships Coordinator',
-    },
+    
+    bioPedro: "PASTE PEDRO BIO HERE",
+    bioEduardo: "PASTE EDUARDO BIO HERE",
+    bioArthur: "PASTE ARTHUR BIO HERE",
+    bioGabriel: "PASTE GABRIEL BIO HERE",
+},
     getInvolved: {
       title: 'Get Involved',
       subtitle: 'There are many ways to participate in our mission to educate children for a more sustainable future.',
