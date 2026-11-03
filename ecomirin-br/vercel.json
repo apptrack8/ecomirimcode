@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/se-envolver", "destination": "/index.html" },
+    { "source": "/nossa-missao", "destination": "/index.html" },
+    { "source": "/galeria", "destination": "/index.html" },
+    { "source": "/time", "destination": "/index.html" }
+  ]
+}
